@@ -1,0 +1,47 @@
+{
+  "name": "fluid-player",
+  "version": "1.0.0",
+  "description": "Lokaler Musikplayer mit Liquid-Glass-Design und schwebendem Overlay",
+  "main": "main.js",
+  "author": "",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Razecrus/fluid-player.git"
+  },
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder",
+    "dist:win": "electron-builder --win",
+    "dist:mac": "electron-builder --mac",
+    "dist:linux": "electron-builder --linux",
+    "release": "electron-builder --publish always"
+  },
+  "dependencies": {
+    "electron-updater": "^6.3.9"
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.fluid.player",
+    "productName": "Fluid",
+    "files": [
+      "index.html",
+      "overlay.html",
+      "main.js",
+      "preload.js",
+      "package.json"
+    ],
+    "mac": { "target": ["dmg", "zip"], "category": "public.app-category.music" },
+    "win": { "target": "nsis" },
+    "linux": { "target": "AppImage", "category": "Audio" },
+    "publish": {
+      "provider": "github",
+      "owner": "Razecrus",
+      "repo": "fluid-player"
+    }
+  }
+}

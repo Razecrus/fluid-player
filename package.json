@@ -8,7 +8,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/Razecrus/fluid-player.git"
+    "url": "https://github.com/DEIN-USERNAME/fluid-player.git"
   },
   "scripts": {
     "start": "electron .",
@@ -40,7 +40,7 @@
     "linux": { "target": "AppImage", "category": "Audio" },
     "publish": {
       "provider": "github",
-      "owner": "Razecrus",
+      "owner": "DEIN-USERNAME",
       "repo": "fluid-player"
     }
   }

@@ -83,11 +83,12 @@
     display:grid;
     grid-template-columns:260px 1fr;
     grid-template-rows:1fr auto;
-    flex:1 1 auto;
+    height:100vh;
     min-height:0;
     gap:14px;
     padding:14px 14px 20px;
   }
+  body.electron #app{height:calc(100vh - 34px);}
   .glass{
     background:var(--glass-bg);
     backdrop-filter: blur(22px) saturate(160%);
